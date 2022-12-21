@@ -5,10 +5,6 @@ Interface for Agrowtek peristaltic pump arrays
 
 ```python
 from agpumps import DualArray
-from pymodbus.client.sync import ModbusSerialClient as ModbusClient
-from pymodbus.exceptions import ModbusIOException
-import IPython
-import time
 
 config_list = [{'port':'COM13', 'unit' : 0}, {'port':'COM16', 'unit' : 1}]
 
