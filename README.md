@@ -24,6 +24,8 @@ with DualArray(config_list, simulating) as a:
 
 **Make sure to set a safe timeout value in the pump array register table. Using automated pumps improperly can damage equipment.**
 
+![alt text](https://github.com/stefangolas/agrow_pumps/blob/master/assets/docs/compressed_air_diagram.svg)
+
 # Pump Setup Instructions
 
 This guide is to set up the AD6i dosing pump array from Agrowtek. The pump array should ship with the AgrowLINK LX1 bridge device.
