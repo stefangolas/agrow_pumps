@@ -18,6 +18,12 @@ with DualArray(config_list, simulating) as a:
 
 ```
 
+### How to Use
+
+**DualArray** implements behavior for a specific PRANCE setup with bacteria culture and other sources. **MultiArrayHandler** is a general interface to a set of multiple AgrowTek modbus pump arrays. 
+
+**Make sure to set a safe timeout value in the pump array register table. Using automated pumps improperly can damage equipment.**
+
 # Pump Setup Instructions
 
 This guide is to set up the AD6i dosing pump array from Agrowtek. The pump array should ship with the AgrowLINK LX1 bridge device.
