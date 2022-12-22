@@ -45,13 +45,7 @@ Next, open the ModLINK utility. Verify that the default settings are correct (Da
 
 ![alt text](https://github.com/Golaszewski/PRANCE/blob/main/perma_pump/images/ModLINK.png)
 
-Now you can import the pump interface into a script with
+Now you can import the pump interface into a script.
 
-```python
-from agrow_pumps.agpumps import AgrowPumps
-
-
-pumps=AgrowPumps(port="COM10")
-```
 
 If you get a time-out error while setting up the pumps, power cycle the array by unplugging it and then reset the address in ModLINK. This might take a few tries.
