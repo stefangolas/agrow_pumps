@@ -25,6 +25,7 @@ with DualArray(config_list, simulating) as a:
 **Make sure to set a safe timeout value in the pump array register table. 
 Using automated pumps improperly can damage equipment.**
 
+### Configuration
 
 <img src="https://github.com/stefangolas/agrow_pumps/blob/master/assets/docs/compressed_air_diagram.png" width="700">
 
