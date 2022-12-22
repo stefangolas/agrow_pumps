@@ -22,9 +22,11 @@ with DualArray(config_list, simulating) as a:
 
 **DualArray** implements behavior for a specific PRANCE setup with bacteria culture and other sources. **MultiArrayHandler** is a general interface to a set of multiple AgrowTek modbus pump arrays. 
 
-**Make sure to set a safe timeout value in the pump array register table. Using automated pumps improperly can damage equipment.**
+**Make sure to set a safe timeout value in the pump array register table. 
+Using automated pumps improperly can damage equipment.**
 
-<img src="https://github.com/stefangolas/agrow_pumps/blob/master/assets/docs/compressed_air_diagram.png" width="450">
+
+<img src="https://github.com/stefangolas/agrow_pumps/blob/master/assets/docs/compressed_air_diagram.png" width="700">
 
 
 # Pump Setup Instructions
