@@ -20,8 +20,8 @@ with DualArray(config_list, simulating) as a:
 
 ### How to Use
 
-**DualArray** implements behavior for a specific PRANCE setup with bacteria culture and other sources. <br>
-**MultiArrayHandler** is a general interface to a set of multiple AgrowTek modbus pump arrays. <br>
+**DualArray** implements behavior for a specific PRANCE setup with bacteria culture and other sources.<br>  
+**MultiArrayHandler** is a general interface to a set of multiple AgrowTek modbus pump arrays.<br>  
 
 **Make sure to set a safe timeout value in the pump array register table. 
 Using automated pumps improperly can damage equipment.**
