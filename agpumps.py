@@ -9,7 +9,11 @@ import serial
 import logging
 import time
 from contextlib import ExitStack
-from pymodbus.client import ModbusSerialClient as ModbusClient  #remove sync after pymodbus.client to make it work with pymodbus 3.1
+try:
+    from pymodbus.client import ModbusSerialClient as ModbusClient #remove sync after pymodbus.client to make it work with pymodbus 3.1
+except (ModuleNotFoundError, ImportError) as e:
+    from pymodbus.client.sync import ModbusSerialClient as ModbusClient
+
 from pymodbus.exceptions import ModbusIOException
 import threading
 
@@ -127,7 +131,9 @@ class AgrowModbusInterface():
     
     def ensure_set_speed(self, address, set_speed):
         self.modbus.write_register(address, set_speed, unit = self.unit)
-
+    
+    def set_timeout(self, timeout):
+        self.modbus.write_register(1000, timeout, unit = self.unit)
     
     def read_register(self, address):
         register_return = self.modbus.read_holding_registers(address, 1, unit = self.unit)
@@ -246,7 +252,6 @@ class DualArray(MultiArrayHandler):
     
     def ensure_empty(self):
         self.pump_by_number(pump = 5, volume = 40, speed = 'high') #Waste
-        print("Empty finished")
     
     def bleach_clean(self):
         self.ensure_empty()
