@@ -8,10 +8,8 @@ from agpumps import DualArray
 
 config_list = [{'port':'COM13', 'unit' : 0}, {'port':'COM16', 'unit' : 1}]
 
-speed_dict = {2:100, 11:100}
 
 simulating = False
-i= 0
 with DualArray(config_list, simulating) as a:
     a.pump_by_number(pump = 4, volume = 28, speed = 'high') #Water
     a.ensure_empty()
@@ -20,9 +18,16 @@ with DualArray(config_list, simulating) as a:
 
 ### How to Use
 
-**DualArray** implements behavior for a specific PRANCE setup with bacteria culture and other sources. **MultiArrayHandler** is a general interface to a set of multiple AgrowTek modbus pump arrays. 
+**DualArray** implements behavior for a specific PRANCE setup with bacteria culture and other sources.
+**MultiArrayHandler** is a general interface to a set of multiple AgrowTek modbus pump arrays.
 
-**Make sure to set a safe timeout value in the pump array register table. Using automated pumps improperly can damage equipment.**
+**Make sure to set a safe timeout value in the pump array register table.<br>  
+Using automated pumps improperly can damage equipment.**<br>  
+
+### Configuration
+
+<img src="https://github.com/stefangolas/agrow_pumps/blob/master/assets/docs/compressed_air_diagram.png" width="700">
+
 
 # Pump Setup Instructions
 
@@ -38,13 +43,7 @@ Next, open the ModLINK utility. Verify that the default settings are correct (Da
 
 ![alt text](https://github.com/Golaszewski/PRANCE/blob/main/perma_pump/images/ModLINK.png)
 
-Now you can import the pump interface into a script with
+Now you can import the pump interface into a script.
 
-```python
-from agrow_pumps.agpumps import AgrowPumps
-
-
-pumps=AgrowPumps(port="COM10")
-```
 
 If you get a time-out error while setting up the pumps, power cycle the array by unplugging it and then reset the address in ModLINK. This might take a few tries.
