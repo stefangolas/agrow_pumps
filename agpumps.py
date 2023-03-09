@@ -9,7 +9,7 @@ import serial
 import logging
 import time
 from contextlib import ExitStack
-from pymodbus.client.sync import ModbusSerialClient as ModbusClient
+from pymodbus.client import ModbusSerialClient as ModbusClient  #remove sync after pymodbus.client to make it work with pymodbus 3.1
 from pymodbus.exceptions import ModbusIOException
 import threading
 
